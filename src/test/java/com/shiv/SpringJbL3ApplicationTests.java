@@ -1,4 +1,4 @@
-package com.shiv.SpringJB_L3;
+package com.shiv;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
