@@ -1,0 +1,8 @@
+my:
+  greeting: Hello
+  list: one,two,three
+  keyValue: "{URL: 'https://www.google.com/', userName: 'user', password: 'pass'}"
+#java -jar SpringJBL3....-SNAPSHOT.jar with application.properties in same directory will override local file
+#java -jar SpringJBL3....-SNAPSHOT.jar --my.greeting: "From Command Line Hello" this command will override local file
+
+management.endpoints.web.exposure.include: "*"
