@@ -3,11 +3,13 @@ package com.shiv.settings;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.List;
+
 @Configuration
 @ConfigurationProperties("my")
 public class MySettings {
     private String greeting;
-    private String list;
+    private List<String> list;
     private String keyValue;
 
     public String getGreeting() {
@@ -18,11 +20,11 @@ public class MySettings {
         this.greeting = greeting;
     }
 
-    public String getList() {
+    public List<String> getList() {
         return list;
     }
 
-    public void setList(String list) {
+    public void setList(List<String> list) {
         this.list = list;
     }
 
