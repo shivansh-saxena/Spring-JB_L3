@@ -6,3 +6,5 @@ my:
 #java -jar SpringJBL3....-SNAPSHOT.jar --my.greeting: "From Command Line Hello" this command will override local file
 
 management.endpoints.web.exposure.include: "*"
+
+spring.profiles.active: test
