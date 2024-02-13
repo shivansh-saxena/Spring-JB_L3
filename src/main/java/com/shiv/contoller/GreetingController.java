@@ -1,5 +1,7 @@
 package com.shiv.contoller;
 
+import com.shiv.settings.MySettings;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +20,12 @@ public class GreetingController {
     private List<String> myList;
     @Value("#{${my.keyValue}}")
     private Map<String,String> keyValue;
+    @Autowired
+    private MySettings mySettings;
     @GetMapping("/")
     public String greeting()
     {
-        return valueFromProperties+"\n  "+myList+staticString+"\n  "+keyValue;
+        return valueFromProperties+"\n  "+myList+staticString+"\n  "+keyValue+"\n" +
+                "  Values from mySettings using ConfigurationProperties; "+mySettings;
     }
 }
