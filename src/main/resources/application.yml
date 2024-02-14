@@ -1,5 +1,5 @@
 my:
-  greeting: Hello
+  greeting: Hello11
   list: one,two,three
   keyValue: "{URL: 'https://www.google.com/', userName: 'user', password: 'pass'}"
 #java -jar SpringJBL3....-SNAPSHOT.jar with application.properties in same directory will override local file
@@ -7,4 +7,8 @@ my:
 
 management.endpoints.web.exposure.include: "*"
 
-spring.profiles.active: test
+#spring.profiles.active: test
+
+spring:
+  config:
+    import: "configserver:http://localhost:9090"
